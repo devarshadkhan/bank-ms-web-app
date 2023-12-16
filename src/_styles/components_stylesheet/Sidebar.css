@@ -1,0 +1,7 @@
+.sidebar{background-color: #2b547e;height: 100vh;    overflow: hidden;position: fixed;width:14rem;padding: 2rem;}
+.sidebar ul{list-style: none;}
+.sidebar ul li{}
+.sidebar ul li a{
+        color: #fff;
+        font-size: 15px;
+}

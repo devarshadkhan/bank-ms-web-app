@@ -1,0 +1,11 @@
+/* .container-fluid{padding: 0;} */
+.col-md-2{padding: 0;}
+.home_wrsp{}
+.home_wrap h1{font-size: 2rem;margin-top: 1rem;}
+.col-md-10{padding: 0 2rem;}
+.home_wrap .bax_1{display: flex;justify-content: space-between;margin: 1rem 0;}
+.home_wrap .tabLe{margin: 2rem 0;}
+
+.ftr{display: flex;justify-content: space-between;align-items: center;margin-bottom: 2rem;}
+.nodata{font-size: 5rem;text-align: center;color: gray;height: 100%;display: flex;align-items: center;justify-content: center;}
+.headings{display: flex;justify-content: space-between;align-items: center;margin: 1rem 0 2rem;}

@@ -1,0 +1,4 @@
+.navBar{background-color: #2b547e;justify-content: center; display: flex;position: sticky;
+    top: 0;}
+.navBar .container-fluid{padding: 0 2rem;}
+.navBar .heading{width: 100%; text-align: center;font-size: 2rem;font-weight: 700;color: #fff;}
