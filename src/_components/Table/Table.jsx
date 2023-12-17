@@ -20,7 +20,10 @@ const TransactionTable = () => {
     isLoading,
     filterBy,
   } = useSelector((state) => state.transactions);
-  console.log(filterBy);
+
+  /**
+   * @param {Real Time Updates for firebase.}
+   */
   useEffect(() => {
     //  real-time updates do not page refresh 
     const unsubscribe = onSnapshot(
@@ -80,14 +83,19 @@ const TransactionTable = () => {
     return <p>Loading...</p>;
   }
 
+  /**
+   * @param {Pagination for Per Item}
+   */
   const indexOfLastItem = (currentPage + 1) * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = transactionData.slice(indexOfFirstItem, indexOfLastItem);
 
+
+  /**
+   * @param {Rendered Table From Data All Transactions}
+   */
   const renderTableData = currentItems
   .filter((item) => {
-    console.log('Filter value:', filterBy);
-    console.log('Transaction type:', item.transaction_type);
     return filterBy ? item.transaction_type?.toLowerCase()?.includes(filterBy.toLowerCase().trim()) : true;
   })
 

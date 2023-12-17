@@ -10,6 +10,9 @@ import ReactPaginate from "react-paginate";
 import { setCurrentPage, setFilter, setItemsPerPage } from "../../_store/transactionsSlice.js";
 import { formattedNumber } from "../../_utils/hooks.js";
 const Home = () => {
+  /**
+   * @param {Redux useSelector for Redux App}
+   */
   const dispatch = useDispatch();
   const {
     data: transactionData,
@@ -17,26 +20,37 @@ const Home = () => {
     itemsPerPage,
     filter
   } = useSelector((state) => state.transactions);
+  const [entriesPerPage, setEntriesPerPage] = useState(itemsPerPage); // State to manage the number of entries per page
   console.log(transactionData);
   const handlePageClick = (data) => {
     dispatch(setCurrentPage(data.selected));
   };
-  const [entriesPerPage, setEntriesPerPage] = useState(itemsPerPage); // State to manage the number of entries per page
   
-
+/**
+ * 
+ * @param {Handle Entry for select tag using 10,50 Entry Per page} event 
+ */
   const handleEntriesPerPageChange = (event) => {
     const newEntriesPerPage = parseInt(event.target.value, 10);
     setEntriesPerPage(newEntriesPerPage);
     dispatch(setItemsPerPage(newEntriesPerPage)); // Dispatch action to update itemsPerPage in Redux state
   };
-  // Calculate the range of entries being displayed
+/**
+ * 
+ * @param {Calculate the range of entries being displayed}  
+ */
+
   const startEntry = currentPage * itemsPerPage + 1;
   const endEntry = Math.min(
     (currentPage + 1) * itemsPerPage,
     transactionData.length
   );
 
-  // Total Amount
+
+ /**
+  * @param {Total Amount Calculate for All Transaction Amount} 
+  * 
+ */
   const totalAmount = transactionData.reduce((sum, transaction) => sum + transaction.amount, 0);
 
   return (

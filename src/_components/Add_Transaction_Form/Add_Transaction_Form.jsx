@@ -20,6 +20,10 @@ function Add_Transaction_Form() {
     formState: { errors },
   } = useForm();
 
+  /**
+   * 
+   * @param {Add Transaction with react hook form} data 
+   */
   const onSubmit = async (data) => {
     // Proceed with setting the document if the form is valid
     await addDoc(collection(db, "transactions"), {
