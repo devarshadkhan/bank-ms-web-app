@@ -9,3 +9,36 @@
 .ftr{display: flex;justify-content: space-between;align-items: center;margin-bottom: 2rem;}
 .nodata{font-size: 5rem;text-align: center;color: gray;height: 100%;display: flex;align-items: center;justify-content: center;}
 .headings{display: flex;justify-content: space-between;align-items: center;margin: 1rem 0 2rem;}
+
+
+
+
+
+/* Media Query */
+
+@media only screen and (min-width: 1920px) {
+}
+
+@media only screen and (max-width: 1580px) {
+ 
+}
+
+/* Ipad pro CSS */
+@media (max-width: 1380px) and (min-width: 1350px) {
+  @media (min-height: 1000px) and (max-height: 1030px) {
+  }
+}
+
+/* Tab Media query */
+@media only screen and (max-width: 1190px) and (min-width: 768px) {
+}
+@media only screen and (max-width: 767px) {
+    .headings {
+        flex-wrap: wrap;
+    }
+    .ftr {
+        flex-wrap: wrap;
+    }
+}
+@media only screen and (max-width: 340px) {
+}

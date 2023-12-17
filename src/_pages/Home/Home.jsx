@@ -89,11 +89,12 @@ const Home = () => {
                     nextLabel={"next"}
                     breakLabel={"..."}
                     pageCount={Math.ceil(transactionData.length / itemsPerPage)}
-                    marginPagesDisplayed={1}
-                    pageRangeDisplayed={2}
+                    marginPagesDisplayed={0}
+                    pageRangeDisplayed={0}
                     onPageChange={handlePageClick}
                     containerClassName={"paginationBttns"}
                     activeClassName={"active"}
+                  
                   />
                 </div>
               </div></>

@@ -6,10 +6,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import "../../_styles/components_stylesheet/Navbar.css"
+import { Link } from 'react-router-dom';
 function HeaderNavbar() {
   return (
     <>
-      {[ 'md', ].map((expand) => (
+      {[ 'md' ].map((expand) => (
         <Navbar key={expand} expand={expand} className="navBar">
           <Container fluid>
             <Navbar.Brand  >Logo</Navbar.Brand>
@@ -21,10 +22,22 @@ function HeaderNavbar() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
+                  <Offcanvas.Body>
+                  <div className="" id={`offcanvasNavbarLabel-expand-${expand}`}>
+                    <ul>
+                        <li>
+                            <Link to="/">Transaction</Link>
+                        </li>
+                        <li>
+                            <Link to="/add-transaction">Add Transaction</Link>
+                        </li>
+                    </ul>
+            </div>
+                  </Offcanvas.Body>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
+             
                 <Nav className="justify-content-center flex-grow-1 pe-3">
                 <h1 className='heading'>Communication Managemenent</h1>
                   {/* <Nav.Link href="#action1">Home</Nav.Link>
